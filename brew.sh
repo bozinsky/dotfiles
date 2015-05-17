@@ -30,6 +30,7 @@ brew install gnu-sed --with-default-names
 # running `chsh`.
 brew install bash
 brew tap homebrew/versions
+brew uninstall bash-completion
 brew install bash-completion2
 
 # Install `wget` with IRI support.
