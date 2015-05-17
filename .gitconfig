@@ -166,3 +166,31 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[user]
+	name = Tim Boettger
+	email = tim.boettger@sap.com
+[mergetool]
+	keepBackup = true
+	prompt = false
+[achievement]
+  upload = true
+[alias]
+  co = checkout
+  ci = commit
+  rb = rebase
+	g = grep --break --heading --line-number
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[merge]
+	tool = Kaleidoscope
+[grep]
+	extendRegexp = true
+	lineNumber = true

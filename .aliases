@@ -139,3 +139,33 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+# Quick history grep
+alias hgrep='history | grep'
+
+# Vagrant Aliases
+alias vu='vagrant up --provider=aws'
+alias vp='vagrant provision'
+alias vd='vagrant destroy -f'
+alias source_bash_profile='source ~/.bash_profile'
+alias edit_bash_profile='atom ~/.bash_profile'
+
+# Git Aliase
+alias gc='git clone'
+alias gp='git pull'
+
+# Toggle remote login
+alias sshloginoff='sudo systemsetup -f -setremotelogin off'
+alias sshloginon='sudo systemsetup -f -setremotelogin on'
+
+# Cssx to all monsoon 2.0 agents
+alias ssh_cssx_build_prod='csshX build-prod --login lroot --ssh_args "-i /Users/d032716/.ssh/image_creation_key"'
+
+# Atom Alias
+alias a.='atom .'
+
+# Tower CMD Alias
+alias t.='gittower .'
+
+# bundle install
+alias bndl_inst='bundle install --path=vendor/bundle --binstubs=bin -j4'

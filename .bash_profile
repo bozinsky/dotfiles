@@ -46,3 +46,68 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+# Macvim in the default bash
+export VIM_APP_DIR=/Applications
+
+# Jmeter addition
+export PATH=${PATH}:/usr/local/jmeter/bin
+
+# Bash_completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
+# Autojump
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+# Git autocompletion
+source ~/.git-completion.bash
+
+# Git completion show the current branch
+PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+
+alias gco='git co'
+alias gci='git ci'
+alias grb='git rb'
+
+# Enable colors in bash
+export CLICOLOR=1
+export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+
+# Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
+
+# Gvim alias to macvim
+alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
+
+# Setup Amazon EC2 Command-Line Tools
+# Installed via Homebrew
+export JAVA_HOME=$(/usr/libexec/java_home)
+export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.7.1.0/libexec"
+
+export PATH=$PATH:$EC2_HOME/bin
+
+# source .monsoon_env
+source ~/.monsoon_env
+
+# source .kitchen_env
+source ~/.kitchen_env
+
+# Burger prompt
+export PS1="\w 🍔  "
+
+# Fortune
+fortune -s
+
+#for go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+# For packer.io
+export PATH=${PATH}:~/bin
+
+export PATH=.bundle/bin:${PATH}
+
+eval "$(rbenv init -)"
+export PATH="/usr/local/sbin:$PATH"
