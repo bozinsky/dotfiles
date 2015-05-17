@@ -50,10 +50,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # Macvim in the default bash
 export VIM_APP_DIR=/Applications
 
-# Jmeter addition
-export PATH=${PATH}:/usr/local/jmeter/bin
-
-# Bash_completion
+# Git Bash_completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
@@ -89,10 +86,10 @@ export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.7.1.0/libexec"
 export PATH=$PATH:$EC2_HOME/bin
 
 # source .monsoon_env
-source ~/.monsoon_env
+[ -f "~/.monsoon_env" ] && source ~/.monsoon_env
 
 # source .kitchen_env
-source ~/.kitchen_env
+[ -f "~/.kitchen_env" ] && source ~/.kitchen_env
 
 # Burger prompt
 export PS1="\w 🍔  "
