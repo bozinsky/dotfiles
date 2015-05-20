@@ -86,10 +86,18 @@ export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.7.1.0/libexec"
 export PATH=$PATH:$EC2_HOME/bin
 
 # source .monsoon_env
-[ -f "~/.monsoon_env" ] && source ~/.monsoon_env
+if [ -f ~/.monsoon_env ]
+  then
+	  source ~/.monsoon_env
+    #echo "sourced ~/.monsoon_env"
+fi
 
 # source .kitchen_env
-[ -f "~/.kitchen_env" ] && source ~/.kitchen_env
+if [ -f ~/.kitchen_env ]
+  then
+	  source ~/.kitchen_env
+	  #echo "sourced ~/.kitchen_env"
+fi
 
 # Burger prompt
 export PS1="\w 🍔  "
