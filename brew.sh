@@ -136,7 +136,6 @@ brew install ec2-ami-tools
 brew install libyaml
 brew install s-lang
 brew install ec2-api-tools
-brew install macvim
 brew install spidermonkey
 brew install erlang
 brew install mercurial
