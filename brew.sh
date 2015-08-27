@@ -167,6 +167,7 @@ brew install wxmac
 brew install gnutls
 brew install pcre
 brew install xz
+brew install joe
 
 # Install from packages list create with brew leaves > brew_packages.list
 cat brew_packages.txt | xargs brew install
