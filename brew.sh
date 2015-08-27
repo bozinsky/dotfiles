@@ -168,5 +168,8 @@ brew install gnutls
 brew install pcre
 brew install xz
 
+# Install from packages list create with brew leaves > brew_packages.list
+cat brew_packages.txt | xargs brew install
+
 # Remove outdated versions from the cellar.
 brew cleanup
